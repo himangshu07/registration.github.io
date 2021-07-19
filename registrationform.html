@@ -1,0 +1,307 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+            <style type="text/css">
+                *{
+                    margin: 0;
+                    padding: 0;
+                }
+                body{
+                    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+                    margin-top: 60px;
+                    
+                }
+                .regform{
+                    width: 800px;
+                    background-color: rgb(0,0,0,0.6);
+                    margin: auto;
+                    color: #FFFFFF;
+                    padding: 10px 0px 10px 0px;
+                    text-align: center;
+                    border-radius: 15px 15px 0px 0px
+                }
+                .main{
+                    background-color: rgb(0,0,0,0.5);
+                    width: 800px;
+                    margin: auto;
+                    
+                    
+                }
+                 form{
+                     padding: 10px;
+                    
+                }
+                #name{
+                    width: 100%;
+                    height: 100px;
+                }
+                .name{
+                    margin-left: 25px;
+                    margin-top: 30px;
+                    width: 125px;
+                    color: white;
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+               .firstname{
+                    position:relative;
+                    left: 90px;
+                    top: -7px;
+                    line-height: 40px;
+                    border-radius: 6px;
+                    padding: 0 22px;
+                    font-size: 16px;
+                }
+                .lastname{
+                    position: relative;
+                    left: 467px;
+                    top: -50px;
+                    line-height: 40px;
+                    border-radius: 6px;
+                    padding: 0 22px;
+                    font-size: 16px;
+                    color: #555;
+                }
+                .firstlabel{
+                    position: relative;
+                    color: #E5E5E5;
+                    text-transform: capitalize;
+                    font-size: 14px;
+                    left: 86px;
+                    top: -7px;
+                }
+                .lastlabel{
+                     position: relative;
+                    color: #E5E5E5;
+                    text-transform: capitalize;
+                    font-size: 14px;
+                    left: 465px;
+                    top: -50px;
+                }
+                .address{
+                    position: relative;
+                    left: 120px;
+                    top: -27px;
+                    line-height: 40px;
+                    width: 532px;
+                    border-radius: 6px;
+                    padding: 0 22px;
+                    font-size: 16px;
+                    color: #555;
+                }
+                .email{
+                    position: relative;
+                    left: 120px;
+                    top: -27px;
+                    line-height: 30px;
+                    width: 352px;
+                    border-radius: 6px;
+                    padding: 0 22px;
+                    font-size: 16px;
+                    color: #555;
+                }
+                .code{
+                    position: relative;
+                    left: 120px;
+                    top: -27px;
+                    line-height: 30px;
+                    width: 132px;
+                    border-radius: 6px;
+                    padding: 0 22px;
+                    font-size: 16px;
+                    color: #555;
+                }
+                .other{
+                    position: relative;
+                    left: 120px;
+                    top: -27px;
+                    line-height: 30px;
+                    width: 232px;
+                    border-radius: 6px;
+                    padding: 0 22px;
+                    font-size: 16px;
+                    color: #555;
+                }
+                    
+                .check{
+                    color: white;
+                    
+                }
+                .option{
+                    position: relative;
+                    left: 120px;
+                    top: -27px;
+                    line-height: 40px;
+                    width: 335px;
+                    border-radius: 6px;
+                    padding: 0 22px;
+                    font-size: 16px;
+                    color: #555;
+                    outline: none;
+                    overflow: hidden;
+                }
+                .option option{
+                    font-size: 20px;
+                }
+                .radio{
+                    display:inline-block;
+                    padding-right: 70px;
+                    font-size: 25px;
+                    margin-left: 25px;
+                    margin-top: 15px;
+                    color: white
+                    
+                }
+                .radio input {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    outline: none;
+                }
+                button{
+                    width: 180px;
+                    height: 60px;
+                    background: none;
+                    border-top: 2px dashed #fff;
+                    border-bottom: 2px dashed #fff;
+                    border-left: 2px solid #fff;
+                    border-right: 2pxpx solid #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    transition:1000ms;
+                    border-radius: 50px;
+                }
+                span, svg{
+                    color: #fff;
+                    position: absolute;
+                    fill: transparent;
+                    font-size: 20px;
+                    letter-spacing: .2em;
+                    font-weight: 400;
+                }
+                button:focus{
+                    outline: none;
+                    border: 2px solid transparent;
+                    width: 60px;
+                    border-left: 2px solid #00FF00;
+                    border-bottom: 2px solid #00FF00;
+                    animation: spin 2s 500ms forwards;
+                }
+                button:focus span{
+                    color: transparent;
+                }
+                button:focus svg{
+                    animation: check 500ms 2300ms forwards;
+                }
+                @keyframes spin{
+                    80%{
+                        border: 2px solid transparent;
+                        border-left: 2px solid #00FF00;
+                    }
+                    100%{
+                        transform: rotate(1080deg);
+                        border: 2px solid #00FF00;
+                    }
+                }
+                @keyframes check{
+                    to{fill: #00FF00;}
+                }
+                .cv{
+                    color: white;
+                      position: relative;
+                    left: 120px;
+                    top: -27px;
+                    line-height: 30px;
+                    width: 232px;
+                    border-radius: 6px;
+                    padding: 0 22px;
+                    font-size: 16px;
+                   
+                }
+                
+            </style>
+    </head>
+    <body>
+        <div class="regform"><h1> Job Application</h1></div>
+        <div class="main">
+            <form>
+                <div id="name">
+                    <h2 class="name">Name:</h2>
+                    <label class="firstlabel">First name</label>
+                    <input class="firstname" type="rext" name="first_name"><br>
+                    <label class="lastlabel">Last name</label>
+                    <input class="lastname" type="text" name="last_name"><br>
+                </div>
+                
+                <h2 class="name">Address:</h2>
+                <input class="address" type="text" name="address">
+                <h2 class="name">Email:</h2>
+                <input class="email" type="text" name="email">
+                <h2 class="name">Phone:</h2>
+                <input class="code" type="text" name="phone">
+                <h2 class="name">SKILLS:</h2>
+               <label class="check">
+                   <input class="check" type="checkbox" name="">
+                   <span class="box"></span>
+                   HTML
+                </label>
+                <label class="check">
+                   <input class="check" type="checkbox" name="">
+                   <span class="box"></span>
+                   CSS
+                </label>
+                <label class="check">
+                   <input class="check" type="checkbox" name="">
+                   <span class="box"></span>
+                   MySQL
+                </label>
+                <label class="check">
+                   <input class="check" type="checkbox" name="">
+                   <span class="box"></span>
+                   Java
+                </label>
+                <label class="check">
+                   <input class="check" type="checkbox" name="">
+                   <span class="box"></span>
+                   PHP
+                </label>
+                
+                <h5 class="name">Others</h5>
+                <input class="other" type="text" name="others">
+                <h2 class="name">Workplace</h2>
+                <select class="option" name="workplace">
+                    <option disabled="disabled" selected="selected">--choose a location--</option>
+                    <option>New delhi</option>
+                    <option>Mumbai</option>
+                    <option>bangalore</option>
+                    <option>Chennai</option>
+                    <option>Kolkata</option>
+                </select>
+              <h2 class="name">Employee status</h2>
+                <label class="radio">
+                <input class="radio-one" type="radio" name="">
+                 <span class="checkmark"></span>
+                 Intern
+                </label>
+                 <label class="radio">
+                <input class="radio-one" type="radio"  name="">
+                     <span class="checkmark"></span>
+                   Experienced
+                </label>
+                <h2 class="name">Upload your CV</h2>
+                <input  class="cv" type="file" name="cv"><br>
+                <button type="submit">
+                    <span>Submit</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/></svg>
+                </button>
+            </form>
+        </div>
+    </body>
+</html>
